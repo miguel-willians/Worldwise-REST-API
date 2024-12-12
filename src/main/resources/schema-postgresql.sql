@@ -1,12 +1,11 @@
--- Definir o schema padrão
-SET search_path TO worldwise;
+
 
 -- Tabela de cidades
 CREATE TABLE if not exists city (
     id SERIAL PRIMARY KEY,                -- ID único para a cidade
     city_name VARCHAR(255) NOT NULL,      -- Nome da cidade
     country VARCHAR(255) NOT NULL,        -- País da cidade
-    emoji VARCHAR(10),                    -- Emoji representando a bandeira do país
+    country_code VARCHAR(10),             -- Emoji representando a bandeira do país
     lat DOUBLE PRECISION NOT NULL,        -- Latitude da posição
     lng DOUBLE PRECISION NOT NULL,        -- Longitude da posição
     notes TEXT,                           -- Notas sobre a cidade
