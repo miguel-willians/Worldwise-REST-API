@@ -15,7 +15,7 @@ public class City {
 
     private String cityName;
     private String country;
-    private String emoji;
+    private String countryCode;    
     private String notes;
     private String date;
 
@@ -46,14 +46,6 @@ public class City {
         this.country = country;
     }
 
-    public String getEmoji() {
-        return emoji;
-    }
-
-    public void setEmoji(String emoji) {
-        this.emoji = emoji;
-    }
-
     public String getNotes() {
         return notes;
     }
@@ -76,6 +68,14 @@ public class City {
 
     public void setPosition(Position position) {
         this.position = position;
+    }
+
+    public String getCountryCode() {
+        return countryCode;
+    }
+
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode;
     }
 
     
