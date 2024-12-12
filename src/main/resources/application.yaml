@@ -1,9 +1,12 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/cities
-    username: postgres
-    password: root
+    url: jdbc:postgresql://${DOTENV_DB_HOST}:${DOTENV_DB_PORT}/${DOTENV_DB_NAME}
+    username: ${DOTENV_DB_USER}
+    password: ${DOTENV_DB_PASSWORD}
   jpa:
-    hibernate:
-      ddl-auto: update
+    properties:
+      hibernate:
+        ddl-auto: update
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
     show-sql: true
