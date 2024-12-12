@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://<seu-host>:<porta>/<nome-do-banco>
+    username: <seu-usuario>
+    password: <sua-senha>
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
