@@ -4,9 +4,6 @@ import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
-// import javax.annotation.PostConstruct;
-// import java.util.Map;
-
 @Configuration
 public class DotenvConfig {
 
