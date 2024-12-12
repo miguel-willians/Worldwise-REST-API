@@ -8,8 +8,8 @@ FROM openjdk:17-jdk-alpine
 	COPY src ./src 
 	RUN chmod 777 mvnw 
 
-	RUN ./mvnw package 
-
+    RUN ./mvnw package -X
+    
     RUN ls -l ./target
 
 	CMD ["java", "-jar", "target/XXXX"] 
