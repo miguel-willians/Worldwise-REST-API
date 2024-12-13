@@ -29,4 +29,4 @@ RUN ./mvnw package -DskipTests -X
 RUN ls -l ./target
 
 # Comando de execução
-CMD ["java", "-jar", "target/app.jar"]
+CMD ["java", "-jar", "target/cities-0.0.1-SNAPSHOT.war"]
