@@ -15,6 +15,7 @@ public class CitiesApplication {
         System.setProperty("DOTENV_DB_NAME", dotenv.get("DOTENV_DB_NAME"));
         System.setProperty("DOTENV_DB_USER", dotenv.get("DOTENV_DB_USER"));
         System.setProperty("DOTENV_DB_PASSWORD", dotenv.get("DOTENV_DB_PASSWORD"));
+
 		SpringApplication.run(CitiesApplication.class, args);
 	}
 

@@ -1,5 +1,3 @@
-
-
 -- Tabela de cidades
 CREATE TABLE if not exists city (
     id SERIAL PRIMARY KEY,                -- ID único para a cidade
@@ -13,7 +11,9 @@ CREATE TABLE if not exists city (
 );
 
 -- Index para facilitar consultas por nome de cidade
-CREATE INDEX idx_city_name ON city (city_name);
+CREATE INDEX if not exists idx_city_name ON city (city_name);
 
 -- Index para facilitar consultas por país
-CREATE INDEX idx_country ON city (country);
+CREATE INDEX if not exists idx_country ON city (country);
+
+

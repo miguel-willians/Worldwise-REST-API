@@ -1,5 +1,8 @@
 package com.worldwise.cities.model;
 
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -17,7 +20,8 @@ public class City {
     private String country;
     private String countryCode;    
     private String notes;
-    private String date;
+    @Column(name = "created_at")
+    private LocalDateTime  date;
 
     @Embedded
     private Position position;
@@ -54,14 +58,6 @@ public class City {
         this.notes = notes;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
     public Position getPosition() {
         return position;
     }
@@ -76,6 +72,14 @@ public class City {
 
     public void setCountryCode(String countryCode) {
         this.countryCode = countryCode;
+    }
+
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 
     
