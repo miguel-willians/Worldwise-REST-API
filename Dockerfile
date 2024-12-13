@@ -6,7 +6,6 @@ COPY pom.xml .
 COPY mvnw .
 COPY .mvn .mvn
 COPY src ./src
-COPY .env ./
 RUN chmod 777 mvnw
 
 # Argumentos para build
