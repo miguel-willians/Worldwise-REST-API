@@ -9,7 +9,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // Permite requisições para qualquer endpoint
-                .allowedOrigins("http://localhost:5173") // Permite apenas o frontend local
+                .allowedOrigins("https://worldwise-5zic.onrender.com") // Permite apenas o frontend local
                 .allowedMethods("GET", "POST", "PUT", "DELETE") // Métodos permitidos
                 .allowedHeaders("*"); // Permite qualquer cabeçalho
     }
